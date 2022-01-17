@@ -109,7 +109,7 @@ function esImpar(num) {
 if (num % 2 !== 0) {
   return true;
  } 
- return false;
+  return false; 
 }
 
   // Devuelve "true" si "num" es impar
