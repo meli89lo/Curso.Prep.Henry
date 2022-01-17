@@ -106,8 +106,10 @@ function esPar(num) {
 
 
 function esImpar(num) {
-if (num % 3 === 0) {
-  return true } return false
+if (num % 2 !== 0) {
+  return true;
+ } 
+ return false;
 }
 
   // Devuelve "true" si "num" es impar
@@ -131,37 +133,33 @@ function elevarAlCubo(num) {
 }
 
 function elevar(num, exponent) {
-  return Math.pow(num, exponent)
-}
   // Devuelve el valor de "num" elevado al exponente dado en "exponent"
   // Tu código:
-  
 
+  return Math.pow(num, exponent)
+}
 
 function redondearNumero(num) {
+    // Redondea "num" al entero más próximo y devuélvelo
+  // Tu código:
+
   return Math.round(num)
 }
-  // Redondea "num" al entero más próximo y devuélvelo
-  // Tu código:
-  
 
 
 function redondearHaciaArriba(num) {
+   // Redondea "num" hacia arriba (al próximo entero) y devuélvelo
+  // Tu código:
+
   return Math.ceil(num)
 }
-  // Redondea "num" hacia arriba (al próximo entero) y devuélvelo
-  // Tu código:
   
-
-
 function numeroRandom() {
+   //Generar un número al azar entre 0 y 1 y devolverlo
+  //Pista: investigá qué hace el método Math.random()
   return Math.random()
 }
-  //Generar un número al azar entre 0 y 1 y devolverlo
-  //Pista: investigá qué hace el método Math.random()
-  
-
-
+ 
 function esPositivo(numero) {
   //La función va a recibir un entero. Devuelve como resultado una cadena de texto que indica si el número es positivo o negativo. 
   //Si el número es positivo, devolver ---> "Es positivo"
@@ -169,20 +167,20 @@ function esPositivo(numero) {
   //Si el número es 0, devuelve false
 
   if (numero > 0) {
-    return "Es positivo"
-  }return "Es negativo"
-  
+    return "Es positivo";
+  } else if (numero < 0 ) {
+    return "Es negativo";
+  } else { return false
 }
 
 
 function agregarSimboloExclamacion(str) {
-  return str + " !"
-
-}
-  // Agrega un símbolo de exclamación al final de la string "str" y devuelve una nueva string
+    // Agrega un símbolo de exclamación al final de la string "str" y devuelve una nueva string
   // Ejemplo: "hello world" pasaría a ser "hello world!"
   // Tu código:
 
+  return str + ("!")
+}
 
 function combinarNombres(nombre, apellido) {
   // Devuelve "nombre" y "apellido" combinados en una string y separados por un espacio.
@@ -197,6 +195,7 @@ function obtenerSaludo(nombre) {
   // Toma la string "nombre" y concatena otras string en la cadena para que tome la siguiente forma:
   // "Martin" -> "Hola Martin!"
   // Tu código:
+
   return "Hola " + nombre + "!"
   
 }

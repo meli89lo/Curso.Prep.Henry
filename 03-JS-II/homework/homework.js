@@ -173,23 +173,27 @@ function esPrimo(numero) {
   // Nota: Los números 0 y 1 NO son considerados números primos
 
   if (numero < 2) {
-    return false; }
-
+    return false; 
+  }
   if (numero === 2){ 
-    return true }
-  for (i=3; i < numero; i++) {
-    return false; }
-  
-  return true }
+    return true; 
+  }
+  for (i = 3; i < numero; i++) {
+    if (numero % i === 0) {
+    return false;
+  }
+}  
+  return true;
+}
 
 
 function esVerdadero(valor) {
   //Escribe una función que reciba un valor booleano y retorne “Soy verdadero” 
   //si su valor es true y “Soy falso” si su valor es false.
   //Escribe tu código aquí
-  if (valor != false) {
+  if (valor === true) {
     return "Soy verdadero"
-  } else if (valor != true) {
+  } else  {
     return "Soy falso"
   }
 }
@@ -207,18 +211,26 @@ function tablaDelSeis() {
   //   console.log(array.push(i * 6))
   // }
 
+  let arrayTabla = [];
+
+  for (i=0; i <=10; i++) {
+     arrayTabla.push(6 * i);
+  }
+  return arrayTabla; 
 }
+
+
 
 function tieneTresDigitos(numero) {
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí
 
-  if (numero >= 100 && numero < 1000) {
-    return "true"
-  } else {
-    return "false"
+  if (numero > 99 && numero < 1000) {
+    return true;
+  } 
+    return false;
   }
-}
+
 
 
 function doWhile(numero) {
@@ -226,7 +238,16 @@ function doWhile(numero) {
   //Retornar el valor final.
   //Usar el bucle do ... while.
 
+  
+  let i = 0
+  // let resultado = numero
 
+  do {
+    numero = numero + 5
+    i ++
+  } while (i < 8) {
+    return numero
+  }
 }
 
 
