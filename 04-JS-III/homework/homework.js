@@ -68,7 +68,12 @@ function arrayContiene(array, elemento) {
   // Comprueba si el elemento existe dentro de "array"
   // Devuelve "true" si está, o "false" si no está
   // Tu código:
-  
+
+  if (array.includes(elemento)) {
+    return true
+  } else {
+    return false
+  }
 }
 
 
@@ -76,6 +81,13 @@ function agregarNumeros(numeros) {
   // "numeros" debe ser un arreglo de enteros (int/integers)
   // Suma todos los enteros y devuelve el valor
   // Tu código:
+
+  let suma = 0
+
+  for (i = 0; i < numeros.length; i++) {
+    suma += numeros [i]
+  }
+  return suma 
 }
 
 
@@ -83,6 +95,15 @@ function promedioResultadosTest(resultadosTest) {
   // "resultadosTest" debe ser una matriz de enteros (int/integers)
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
   // Tu código:
+
+  let suma = 0
+  let promedio = 0 
+
+  for (i=0; i < resultadosTest.length; i++) {
+    suma += resultadosTest [i]
+
+    return promedio = suma / (resultadosTest.length - 1)
+  }
 }
 
 
@@ -90,6 +111,8 @@ function numeroMasGrande(numeros) {
   // "numeros" debe ser una matriz de enteros (int/integers)
   // Devuelve el número más grande
   // Tu código:
+
+  return Math.max(numeros)
 }
 
 
@@ -104,6 +127,13 @@ function cuentoElementos(arreglo){
   //Realiza una función que retorne la cantidad de los elementos del arreglo cuyo valor es mayor a 18.
   //Escribe tu código aquí
 
+  let arrayMas18 = []
+
+  for (i = 0; i < arreglo.length; i++) {
+    if (arreglo < 18) {
+      return arrayMas18.push(arreglo [i]) 
+  }
+
 }
 
 
@@ -113,6 +143,11 @@ function diaDeLaSemana(numeroDeDia) {
   //si el día corresponde a Sábado o Domingo y “Es dia Laboral” en caso contrario. 
   //Escribe tu código aquí   
   
+  if (numeroDeDia >= 2 || numeroDeDia <= 6) {
+    return "Es dia laboral" } else {
+      return "Es fin de semana"
+  }
+  
 } 
 
 
@@ -120,7 +155,11 @@ function empiezaConNueve(n) {
   //Desarrolle una función que recibe como parámetro un número entero n. Debe retornar true si el entero 
   //inicia con 9 y false en otro caso.
   //Escribe tu código aquí
-  
+
+  if (n.includes(9)) {
+    return true } else { 
+      return false 
+  }
 }
 
 
@@ -128,6 +167,8 @@ function todosIguales(arreglo) {
   //Escriba la función todosIguales, que indique si todos los elementos de un arreglo son iguales:
   //retornar true, caso contrario retornar false.
   //Escribe tu código aquí  
+
+  
   
 } 
 
@@ -144,6 +185,13 @@ function mayorACien(array) {
   //La función recibe un array con enteros entre 0 y 200. Recorrer el array y guardar en un nuevo array sólo los
   //valores mayores a 100 (no incluye el 100). Finalmente devolver el nuevo array.
   // Tu código:
+
+  nuevoArray = []
+  
+  for ( let i = 0; i < array.length; i ++) {
+    return nuevoArray.push (array)
+  }
+
 }
 
 
@@ -155,6 +203,15 @@ function breakStatement(numero) {
   //devolver: "Se interrumpió la ejecución"
   //Pista: usá el statement 'break'
   // Tu código:
+
+  array = []
+
+  for (let i = 0; i < 10; i++) {
+    numero [i] = numero [i] + 2 
+
+    return array.push(numero[i])
+  }
+
 }
 
 
