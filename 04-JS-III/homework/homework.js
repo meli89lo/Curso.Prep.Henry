@@ -117,7 +117,7 @@ function multiplicarArgumentos() {
   // Escribe tu código aquí:
 
   if (arguments.length < 1) return 0;
-  
+
   let total = 1
 
   for (let i = 0; i < arguments.length; i++) {
@@ -221,18 +221,17 @@ function breakStatement(numero) {
   //Pista: usá el statement 'break'
   // Tu código:
 
+  let suma = numero;
   let array = [];
-  let suma = numero
+  // let i = 0 
 
-  for (let i = 0; i < 10; i++) {
+  for (i = 0; i < 10; i++) {
     suma = suma + 2
-
-    if (suma === i) { break; }
-
-    array.push(suma);
-
+    if (suma === i) break; 
+    else {array.push(suma)};
   }
-  return array;
+  if (i < 10) return "Se interrumpió la ejecución";
+  return array 
 }
 
 function continueStatement(numero) {
@@ -243,13 +242,13 @@ function continueStatement(numero) {
   //Pista: usá el statement 'continue'
   // Tu código:
 
-  let nuevoValor = numero;
+  let nuevoValor = 0;
   let array = [];
 
-  for (let i = 0; i <= 10; i++) {
+  for (let i = 1; i <= 10; i++) {
     if (i === 5) continue;
 
-    nuevoValor += 2;
+    nuevoValor = numero += 2;
     array.push(nuevoValor);
   }
   return array;
