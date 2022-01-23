@@ -8,16 +8,13 @@ function crearGato(nombre, edad) {
   // Tu código:
 
   let obj = {
-
     nombre: nombre,
     edad: edad,
     meow: function () {
       return "Meow!";
-    }
-  }
-  return obj 
+    },
+  }; return obj;
 }
-
 
 function agregarPropiedad(objeto, property) {
   // Agrega una propiedad al objeto (argumento "objeto") con el valor `null`
@@ -27,7 +24,7 @@ function agregarPropiedad(objeto, property) {
 
   objeto[property] = null;
 
-  return objeto
+  return objeto;
 }
 
 function invocarMetodo(objeto, metodo) {
@@ -37,7 +34,6 @@ function invocarMetodo(objeto, metodo) {
   // Tu código:
 
   objeto[metodo]();
-
 }
 
 function multiplicarNumeroDesconocidoPorCinco(objetoMisterioso) {
@@ -47,9 +43,7 @@ function multiplicarNumeroDesconocidoPorCinco(objetoMisterioso) {
 
   let resultado = objetoMisterioso.numeroMisterioso * 5;
 
-
-  return resultado
-
+  return resultado;
 }
 
 function eliminarPropiedad(objeto, unaPropiedad) {
@@ -60,7 +54,7 @@ function eliminarPropiedad(objeto, unaPropiedad) {
 
   delete objeto[unaPropiedad];
 
-  return objeto
+  return objeto;
 }
 
 function nuevoUsuario(nombre, email, password) {
@@ -72,11 +66,9 @@ function nuevoUsuario(nombre, email, password) {
     nombre: nombre,
     email: email,
     password: password,
+  };
 
-  }
-
-  return nuevObjeto
-
+  return nuevObjeto;
 }
 
 function tieneEmail(usuario) {
@@ -85,13 +77,10 @@ function tieneEmail(usuario) {
   // Tu código:
 
   if (usuario.email) {
-    return true
+    return true;
   }
-  return false
+  return false;
 }
-
-
-
 
 function tienePropiedad(objeto, propiedad) {
   // Devuelve "true" si el objeto (parámetro "objeto") tiene una propiedad (key) cuyo nombre es igual al valor del argumento "propiedad"
@@ -100,10 +89,10 @@ function tienePropiedad(objeto, propiedad) {
   // Tu código:
 
   if (objeto[propiedad]) {
-    return true
-  } return false
+    return true;
+  }
+  return false;
 }
-
 
 function verificarPassword(usuario, password) {
   // Comprueba si la "password" enviada coincide con la propiedad "password" del objeto "usuario"
@@ -112,8 +101,9 @@ function verificarPassword(usuario, password) {
   // // Tu código:
 
   if (usuario.password === password) {
-    return true
-  } return false
+    return true;
+  }
+  return false;
 }
 
 function actualizarPassword(usuario, nuevaPassword) {
@@ -121,10 +111,9 @@ function actualizarPassword(usuario, nuevaPassword) {
   // Devuelve el objeto
   // Tu código:
 
-  usuario.password = nuevaPassword
+  usuario.password = nuevaPassword;
 
-  return usuario
-
+  return usuario;
 }
 
 function agregarAmigo(usuario, nuevoAmigo) {
@@ -133,9 +122,9 @@ function agregarAmigo(usuario, nuevoAmigo) {
   // Devuelve el objeto "usuario"
   // // Tu código:
 
-  usuario.amigos.push(nuevoAmigo)
+  usuario.amigos.push(nuevoAmigo);
 
-  return usuario 
+  return usuario;
 }
 
 function pasarUsuarioAPremium(usuarios) {
@@ -145,13 +134,11 @@ function pasarUsuarioAPremium(usuarios) {
   // Devuelve el array de usuarios
   // Tu código:
 
-
   for (i = 0; i < usuarios.length; i++) {
-    usuarios[i].esPremium = true
+    usuarios[i].esPremium = true;
   }
 
-  return usuarios
-
+  return usuarios;
 }
 
 function sumarLikesDeUsuario(usuario) {
@@ -162,12 +149,12 @@ function sumarLikesDeUsuario(usuario) {
   // Devuelve la suma
   // Tu código:
 
-  let suma = 0
+  let suma = 0;
 
   for (i = 0; i < usuario.posts.length; i++) {
-    suma = suma + usuario.posts[i].likes
+    suma = suma + usuario.posts[i].likes;
   }
-  return suma 
+  return suma;
 }
 
 function agregarMetodoCalculoDescuento(producto) {
@@ -182,9 +169,10 @@ function agregarMetodoCalculoDescuento(producto) {
   // Tu código:
 
   producto.calcularPrecioDescuento = function () {
-    return producto.precio - producto.precio * producto.porcentajeDeDescuento
-  }
-  return producto
+    return producto.precio - producto.precio * producto.porcentajeDeDescuento;
+  };
+
+  return producto;
 }
 
 // No modificar nada debajo de esta línea
@@ -204,5 +192,5 @@ module.exports = {
   agregarAmigo,
   pasarUsuarioAPremium,
   sumarLikesDeUsuario,
-  agregarMetodoCalculoDescuento
+  agregarMetodoCalculoDescuento,
 };

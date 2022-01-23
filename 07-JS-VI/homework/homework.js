@@ -5,17 +5,14 @@ function mayuscula(nombre) {
   //ej: Recibe "mario" ----> Devuelve "Mario"
   //Tu código:
 
-  nombre.forEach(function (nombre) {
-    return cb(nombre).charAt(0).toUpperCase()
-  })
-
+  return (nombre[0].toUpperCase() + nombre.slice(1))
 }
 
 function invocarCallback(cb) {
   // Invoca al callback `cb`
   //Tu código:
 
-  return cb() 
+  return cb()
 }
 
 function operacionMatematica(n1, n2, cb) {
@@ -33,10 +30,13 @@ function sumarArray(numeros, cb) {
   // No es necesario devolver nada
   //Tu código:
 
-  numeros.reduce(function (acc, numeros) {
-    return cb(acc + numeros)
+
+  let suma = numeros.reduce(function (acc, elemento) {
+    return (acc + elemento)
 
   })
+
+  return cb (suma)
 
 }
 
@@ -58,11 +58,11 @@ function map(array, cb) {
   // El nuevo array debe tener la misma longitud que el array del argumento
   //Tu código:
 
-  let nuevoArray = []
-
-  array.forEach(function (array) {
-    return cb(array)
+  let nuevoArray  = array.map(function (elemento) {
+    return cb(elemento)
   })
+
+  return nuevoArray
 }
 
 function filter(array) {
@@ -70,14 +70,14 @@ function filter(array) {
   //Devolver un nuevo array con los elementos que cumplen la condición
   //Tu código:
 
-  let nuevoArray = []
+  let nuevoArray = array.filter(function (elemento) {
+    if (elemento[0] === "a"){
 
-  array.filter(function (array) {
-    array [0] === "a";
+    return elemento
+  }});
 
-    return nuevoArray.push (array)
-  });
-  
+  return nuevoArray
+
 }
 
 // No modificar nada debajo de esta línea
