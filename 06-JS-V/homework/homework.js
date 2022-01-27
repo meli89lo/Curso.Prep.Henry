@@ -65,9 +65,9 @@ function agregarStringInvertida() {
   String.prototype.reverse = function () {
     for (let i = this.length - 1; i >= 0; i--) {
       reverseText.push(this[i]);
+    }
+    return reverseText.join("")
   }
-  return reverseText.join("")
-}
 }
 
 // ---------------------------------------------------------------------------//
@@ -98,8 +98,8 @@ function crearInstanciaPersona(nombre, apellido, edad, dir) {
   //Recibirá los valores "Juan", "Perez", 22, "Saavedra 123" para sus respectivas propiedades
   //Devolver la nueva persona creada
 
-  const Juan = new Persona("Juan", "Perez", 22, "Saavedra 123");
-  return Juan
+  const juan = new Persona(nombre, apellido, edad, dir);
+  return juan
 }
 
 function agregarMetodo() {
@@ -107,7 +107,7 @@ function agregarMetodo() {
   //Ej: "Juan, 22 años"
 
   Persona.prototype.datos = function () {
-    return this.nombre + ", " + this.edad + " años"
+    return this.nombre + ", " + this.edad.toString() + " años"
   }
 }
 
