@@ -25,14 +25,19 @@ function numberOfCharacters(string) {
   //Ej: Recibe ---> "adsjfdsfsfjsdjfhacabcsbajda" || Devuelve ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 } 
   //Escribe tu código aquí
 
-  let obj = {}
+   objeto = {};
 
-  for (i = 0; i = string.length; i++) {
+  for (i = 0; i < string.length; i++) {
+
+    if (Object.keys(objeto).includes(string[i])) {
+
+      objeto[string[i]] = objeto[string[i]] + 1
+
+    } else { objeto[string[i]] = 1 }
 
   }
+  return objeto
 }
-
-//includes o howobjetalgo
 
 
 function capToFront(s) {
@@ -50,10 +55,9 @@ function capToFront(s) {
       may.push(s[i])
     } else min.push(s[i])
   }
-  return may.concat(min).join(" ")
+  return may.concat(min).join("")
 }
-
-//return str.split(" ").reverse()
+ // return "".concat(may,min)
 
 
 function asAmirror(str) {
@@ -63,12 +67,12 @@ function asAmirror(str) {
   //Ej: Recibe ---> "The Henry Challenge is close!" || Devuelve ---> "ehT yrneH egnellahC si !esolc"
   //Escribe tu código aquí
 
-  let mirror = str.split(" ").map(function (palabra) {
+  let espejo = str.split(" ").map(function (palabra) {
     return palabra.split("").reverse().join("")
-
-  })
-  return mirror
+  }).join(" ")
+  return espejo
 }
+
 
 
 function capicua(numero) {
@@ -77,13 +81,14 @@ function capicua(numero) {
   //izquierda a derecha que de derecha a izquierda. Caso contrario retorna "No es capicua"
   //Escribe tu código aquí
 
-  let numero = numero.toString()
-  let numero2 = ""
+  let entero = numero.toString();
+  let nuevoEntero = ""
 
-  numero2 = numero.split("").reverse().join("")
-
-  if (numero === numero2) return "Es capicua";
-  return "No es capicua";
+  nuevoEntero = entero.split("").reverse().join("")
+  if (entero === nuevoEntero){
+    return "Es capicua"} else {
+      return "No es capicua"
+  }
 }
 
 
@@ -126,25 +131,14 @@ function buscoInterseccion(arreglo1, arreglo2) {
   let arreglo = []
 
   for (i = 0; i < arreglo1.length; i++) {
-    for (j = 0; j < arreglo1.length; j++) {
-      if (arreglo1[i] === arreglo2[2]) {
-        return arreglo.push(arreglo1[i])
+    for (j = 0; j < arreglo2.length; j++) {
+      if (arreglo1[i] == arreglo2[j]) {
+          arreglo.push(arreglo1[i])
       }
-
     }
   }
   return arreglo
 }
-
-// let arreglo = []
-
-// for(i=0; i<arreglo1.length;i++){
-//   if (arreglo2.includes(arreglo1[i])){
-//     arreglo.push(arreglo[i])
-//   }
-//   return arreglo
-// }
-
 
 
 // No modificar nada debajo de esta línea
